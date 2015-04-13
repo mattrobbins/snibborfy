@@ -1,3 +1,5 @@
 <h1><%= @organization.company_name %></h1>
 <p><%= @organization.company_name %></p>
+<%= link_to "edit", edit_organization_path(@organization) %></p>
+<%= link_to "delete", organization_path(@organization), method: :delete, data: {confirm: "Really delete the article?"} %></p>
 <%= link_to "<< Back to List of Organizations", organizations_path %>

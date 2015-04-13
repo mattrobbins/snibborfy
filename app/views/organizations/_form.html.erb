@@ -1,0 +1,14 @@
+<%= form_for(@organization) do |f| %>
+  <ul>
+    <% @organization.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+      <% end %>
+  </ul>
+  <p>
+    <%= f.label :company_name %><br />
+    <%= f.text_field :company_name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
